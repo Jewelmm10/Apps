@@ -1,0 +1,192 @@
+/*
+* @Author: Juwel
+* @Date:   2024-03-04 12:46:36
+* @Last Modified by:   Juwel
+* @Last Modified time: 2024-03-04 12:46:50
+*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:ital@0;1&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+    body {
+        font-family: "Lato", sans-serif;
+        font-weight: 400;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.mobile_screen {
+    @apply w-[377px] h-[800px] bg-primary overflow-hidden;
+}
+.head {
+    @apply mt-12 py-16 flex items-center justify-center
+}
+.main-content {
+    @apply rounded-t-[50px] p-10 text-center overflow-hidden
+}
+.content {
+    @apply main-content h-screen bg-gradient-to-b from-secondary 
+}
+.btn {
+    @apply inline-block px-8 py-3  bg-gradient-to-b from-secondary to-primary text-white font-semibold shadow-md text-xl hover:bg-gradient-to-t transition;
+}
+.btn-primary {
+    @apply rounded-l-full rounded-b-full;
+}
+.btn-secondary {
+    @apply rounded-t-full rounded-e-full flex items-center;
+}
+.menu {
+  @apply bg-primary absolute inset-0 flex items-center justify-center transition-all;
+  transform: translate3d(-100%, 0, 0);
+}
+.menu.show {
+  transform: translate3d( 0, 0, 0 );
+}
+.input-group {
+    @apply flex items-center px-4 py-1 bg-secondary_light rounded-full text-white shadow
+}
+.otp-inpur {
+    @apply w-14 bg-secondary_light border-none focus:outline-none rounded-3xl text-white text-center shadow
+}
+.apps-input {
+    @apply w-full bg-transparent border-none focus:ring-0 text-white  placeholder:text-white h-10
+}
+.select2-container--default .select2-selection--single {
+  @apply !bg-transparent !border-none;
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+  @apply text-white
+}
+.back-btn {
+    @apply absolute top-0 left-5 w-12 h-12 rounded-full flex justify-center text-2xl text-white items-center bg-gradient-to-r from-secondary to-primary;
+}
+.btn-menu {
+  @apply back-btn
+}
+.quick-btn {
+    @apply bg-gradient-to-br hover:bg-gradient-to-t hover:transition from-blue-400 to-primary flex flex-col justify-center items-center text-white rounded-2xl shadow-md
+}
+.content-data {
+  @apply h-[445px] overflow-hidden overflow-y-scroll transition-all mb-3
+}
+
+
+.content-data::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 5px;
+	background-color: #F5F5F5;
+}
+
+.content-data::-webkit-scrollbar
+{
+	width: 4px;
+	background-color: #F5F5F5;
+}
+
+.content-data::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #555;
+  
+}
+#chart {
+  max-width: 650px;
+  margin: 35px auto;
+}
+
+.card {
+  @apply p-3 rounded-lg shadow-md bg-white my-4
+}
+
+
+/* ---------- */
+/* Checkbox */
+.check-input {
+  @apply relative flex items-center gap-3 cursor-pointer text-white flex-1
+}
+.checkbox {
+  @apply relative h-6 w-6 border transition-all
+}
+.box-checked:after {
+  content: "";
+  position: absolute;
+  top: 13px;
+  left: 3px;
+  width: 0px;
+  height: 0px;
+  border: solid #F5F5F5;
+  border-width: 2px 2px 0 0;
+  opacity: 0;
+  transform-origin: left top;
+  transform: scaleX(-1) rotate(135deg);
+  transition: width 0.08s ease 0.1s, height 0.1s ease, border-color 0.3s ease,
+    opacity 0.1s ease 0.2s, border-width 0.1s ease;
+}
+
+.check-input input:checked ~ .box-checked:after {
+  opacity: 1;
+  width: 8px;
+  height: 16px;
+  border-color: #fff;
+  transition: width 0.1s ease, height 0.08s ease 0.1s, border-color 0.3s ease,
+    border-width 0.1s ease;
+}
+
+
+
+
+
+
+/* HTML: <div class="loader"></div> */
+.loader {
+    width: 55px;
+    aspect-ratio: 1;
+    position: relative;
+  }
+  .loader:before,
+  .loader:after {
+    content: "";
+    position: absolute;
+    border-radius: 50px;
+    box-shadow: 0 0 0 3px inset #fff;
+    animation: box 2.5s infinite;
+  }
+  .loader:after {
+    animation-delay: -1.25s;
+  }
+  @keyframes box {
+    0% {
+      inset: 0 35px 35px 0;
+    }
+    12.5% {
+      inset: 0 35px 0 0;
+    }
+    25% {
+      inset: 35px 35px 0 0;
+    }
+    37.5% {
+      inset: 35px 0 0 0;
+    }
+    50% {
+      inset: 35px 0 0 35px;
+    }
+    62.5% {
+      inset: 0 0 0 35px;
+    }
+    75% {
+      inset: 0 0 35px 35px;
+    }
+    87.5% {
+      inset: 0 0 35px 0;
+    }
+    100% {
+      inset: 0 35px 35px 0;
+    }
+}

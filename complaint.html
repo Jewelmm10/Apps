@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/select2.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>BSMMU</title>
+</head>
+<body>
+    <div class="mobile_screen flex flex-col">
+        <div class="mt-12 py-5 flex-col flex items-center relative">
+            <a class="back-btn" href="home.html"><i class="ri-arrow-left-line"></i></a>
+            <h3 class="text-3xl text-white font-semibold">Complaint</h3>
+        </div>
+        <div class="p-4">
+            <form action="">
+                <div class="mb-5">
+                    <div class="input-group !rounded-lg">
+                        <input type="text" placeholder="Full Name" class="apps-input">
+                    </div>                
+                </div>  
+                <div class="mb-5 grid grid-cols-3 gap-3">
+                    <div class="input-group !rounded-lg">
+                        <input type="text" placeholder="Age" class="apps-input">
+                    </div>                      
+                    <div class="input-group !rounded-lg">
+                        <input type="text" placeholder="Weight" class="apps-input">
+                    </div>  
+                    <div class="input-group !rounded-lg">
+                        <select class="city form-input apps-input" id="">
+                            <option selected>Gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                    </div> 
+                </div> 
+                <div class="mb-5">
+                    <div class="input-group !rounded-lg">
+                        <input type="tel" placeholder="Contact Number" class="apps-input">
+                    </div>                
+                </div> 
+               
+                <div class="flex justify-center mt-24">                    
+                    <a href="complaint2.html" class="btn quick-btn w-full">NEXT</a>
+                </div>
+            </form>
+            
+        </div>
+    </div>
+
+    <!-- scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/all.min.js"></script>
+    <script src="assets/js/select2.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <!-- scripts -->
+</body>
+</html>

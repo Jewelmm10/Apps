@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>BSMMU</title>
+</head>
+<body>
+    <div class="mobile_screen flex flex-col relative">
+        <div class="head flex-col relative">
+            <a class="btn-menu" href="#"><i class="ri-menu-line"></i></a>
+            <h3 class="text-3xl text-white font-semibold">Welcome Back, User</h3>
+        </div> 
+        <nav class="menu p-4">   
+            <a class="back-btn btn-close !left-auto right-8 !top-8" href="#"><i class="ri-arrow-left-line"></i></a>           
+            <ul class="w-full flex flex-col">
+                <li><a href="home.html" class="w-full btn btn-primary mt-6 text-center">Search</a></li>
+                <li><a href="complaint.html" class="w-full btn btn-primary mt-6 text-center">Complaint</a></li>
+                <li><a href="profile.html" class="w-full btn btn-primary mt-6 text-center">Profile</a></li>
+                <li><a href="" class="w-full btn btn-primary mt-6 text-center">About Us</a></li>
+            </ul>
+        </nav>       
+        <div class="p-4">                
+            <div class="grid grid-cols-2 gap-4">
+                <div class="grid gap-4">
+                    <a class="quick-btn h-32" href="search.html">
+                        <i class="ri-search-line"></i>
+                        <span>Search</span>
+                    </a>
+                    <a class="quick-btn h-24" href="#">
+                        <i class="ri-information-line"></i>
+                        <span>About us</span>
+                    </a>
+                </div>
+                <div class="grid gap-4">                
+                    <a class="quick-btn h-24" href="profile.html">
+                        <i class="ri-user-line"></i>
+                        <span>Profile</span>
+                    </a>                                
+                    <a class="quick-btn h-32" href="complaint.html">
+                        <i class="ri-flag-fill"></i>
+                        <span>Complaint</span>
+                    </a>
+                </div>
+                 <a class="quick-btn !flex-row col-span-2 py-4" href="#">
+                    <i class="ri-links-line mr-4"></i>
+                    <span>Visit VigiAccess</span>
+                </a> 
+            </div>            
+        </div>
+    </div>
+
+    <!-- scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/all.min.js"></script>
+    <script src="assets/js/select2.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Select DOM Items
+        const menuBtn  = document.querySelector(".btn-menu");
+        const menu     = document.querySelector(".menu");
+        const closeBtn = document.querySelector(".btn-close");
+
+        menuBtn.addEventListener("click", toggleMenu);
+        closeBtn.addEventListener("click", closeMenu);
+
+        function toggleMenu() {
+            menu.classList.add("show");       
+        }
+        function closeMenu() {
+            menu.classList.remove("show");
+        }
+    </script>
+    <!-- scripts -->
+</body>
+</html>
